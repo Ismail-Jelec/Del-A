@@ -1,18 +1,19 @@
+/*
 string Mjölk = mjölk;
 string Bröd = bröd;
 string Ost = ost;
-string Ajvar = Ajvar;
+string Ajvar = ajvar;
+*/
 
-static void Buy()
+
+List <string> items = new List<string>();
+List <int> kr = new List<int>();
+
+static string Ask(string question)
 {
-    Console.ReadLine();
-
+    Console.Write(question + " ");
+    return Console.ReadLine();
 }
-
-
-
-List <Store> items = [];
-
 
 while(true)
 {
@@ -25,9 +26,10 @@ while(true)
     ];
 
     string choice = Ask(string.Join("\n", menu) + "\n");
-    if (choice = "1")
+    if (choice = "mjölk")
     {
-        
+        string item = new(Ask("Hur många mjölk paket vill du ha? "));
+        items.Add(item);
     }
 
 }

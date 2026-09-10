@@ -18,18 +18,50 @@ static string Ask(string question)
 while(true)
 {
     string[] menu = [
-        "Vad vill du köpa?",
-        "Mjölk - 15kr",
-        "Bröd - 32kr", 
-        "Ost - 89kr",
-        "Ajvar - 30kr",
+        "Välkommen till Gamestop!",
+        "Vad vill du köpa?\n",
+        "GTA 6 - 899kr",
+        "F1 25 - 700kr", 
+        "Minecraft - 239kr",
+        "Elden Ring - 500kr",
+        "LMU - 249kr"
     ];
 
     string choice = Ask(string.Join("\n", menu) + "\n");
-    if (choice = "mjölk")
+    if (choice = "GTA 6")
     {
-        string item = new(Ask("Hur många mjölk paket vill du ha? "));
+        string item = Console.ReadLine();
         items.Add(item);
     }
+
+    else if (choice = "F1 25")
+    {
+        string item = Console.ReadLine();
+        items.Add(item);
+    }
+    
+    else if (choice = "Minecraft")
+    {
+        string item = Console.ReadLine();
+        items.Add(item);
+    }
+
+    else if (choice = "Elden Ring")
+    {
+        string item = Console.ReadLine();
+        items.Add(item);
+    }
+
+    else if (choice = "LMU")
+    {
+        string item = Console.ReadLine();
+        items.Add(item);
+    }
+
+    else
+    {
+        Console.WriteLine("Spelet finns inte");
+    }
+
 
 }

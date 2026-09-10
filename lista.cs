@@ -1,7 +1,7 @@
-Console.WriteLine("");
-Console.WriteLine("Mjölk - 15kr");
-Console.WriteLine("Bröd - 32kr");
-Console.WriteLine("Ost - 89kr");
+string Mjölk = mjölk;
+string Bröd = bröd;
+string Ost = ost;
+string Ajvar = Ajvar;
 
 static void Buy()
 {
@@ -14,10 +14,20 @@ static void Buy()
 List <Store> items = [];
 
 
-string[] menu = [
-    "Vad vill du köpa?",
-    "Mjölk - 15kr",
-    "Bröd - 32kr", 
-    "Ost - 89kr",
-    "Ajvar - 30kr",
-];
+while(true)
+{
+    string[] menu = [
+        "Vad vill du köpa?",
+        "Mjölk - 15kr",
+        "Bröd - 32kr", 
+        "Ost - 89kr",
+        "Ajvar - 30kr",
+    ];
+
+    string choice = Ask(string.Join("\n", menu) + "\n");
+    if (choice = "1")
+    {
+        
+    }
+
+}

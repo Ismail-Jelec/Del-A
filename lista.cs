@@ -1,11 +1,3 @@
-/*
-string Mjölk = mjölk;
-string Bröd = bröd;
-string Ost = ost;
-string Ajvar = ajvar;
-*/
-
-
 List <string> items = new List<string>();
 List <int> kr = new List<int>();
 
@@ -17,45 +9,83 @@ static string Ask(string question)
 
 while(true)
 {
+    Console.WriteLine("Välkommen till Gamestop!");
+
     string[] menu = [
-        "Välkommen till Gamestop!",
-        "Vad vill du köpa?\n",
+        "",
+        "Vad vill du göra?",
+        "Välj ett nummet\n",
+        "1: Visa min varukorg",
+        "2: Köpa ett spel",
+    ];
+
+    string number = Ask(string.Join("\n", menu) + "\n");
+
+    if (number == "1")
+    {
+        for (int i = 0; i < 0; i++);
+        Console.WriteLine($"{i + 1}. {items[i]} - {kr[i]}");
+
+        int total = kr.Sum();
+        Console.WriteLine($"Total: {total} kr");
+    }
+
+    else if (number == "2")
+    {
+        
+    }
+
+    else
+    {
+        Console.WriteLine("Numret är felaktigt");
+
+    }
+
+    string[] spel = [
+        "",
+        "Detta är våra spel",
+        "Skriv spelet som du vill lägga till i varukorgen\n",
         "GTA 6 - 899kr",
         "F1 25 - 700kr", 
         "Minecraft - 239kr",
         "Elden Ring - 500kr",
-        "LMU - 249kr"
+        "LMU - 249kr",
+        "\nVad vill du köpa?",
+        Console.ReadLine(),
     ];
 
-    string choice = Ask(string.Join("\n", menu) + "\n");
-    if (choice = "GTA 6")
+    
+    string choice = Ask(string.Join("\n", spel) + "\n");
+    Console.Clear();
+
+    if (choice == "GTA 6")
     {
-        string item = Console.ReadLine();
-        items.Add(item);
+        items.Add(choice);
+        Console.WriteLine("Spelet har lagts till i varukorgen");
     }
 
-    else if (choice = "F1 25")
+    else if (choice == "F1 25")
     {
-        string item = Console.ReadLine();
-        items.Add(item);
+        items.Add(choice);
+        Console.WriteLine("Spelet har lagts till i varukorgen");
     }
     
-    else if (choice = "Minecraft")
+    else if (choice == "Minecraft")
     {
-        string item = Console.ReadLine();
-        items.Add(item);
+        items.Add(choice);
+        Console.WriteLine("Spelet har lagts till i varukorgen");
     }
 
-    else if (choice = "Elden Ring")
+    else if (choice == "Elden Ring")
     {
-        string item = Console.ReadLine();
-        items.Add(item);
+        items.Add(choice);
+        Console.WriteLine("Spelet har lagts till i varukorgen");
     }
 
-    else if (choice = "LMU")
+    else if (choice == "LMU")
     {
-        string item = Console.ReadLine();
-        items.Add(item);
+        items.Add(choice);
+        Console.WriteLine("Spelet har lagts till i varukorgen");
     }
 
     else

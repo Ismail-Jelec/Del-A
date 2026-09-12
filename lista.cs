@@ -23,6 +23,7 @@ while(true)
     ];
 
     string number = Ask(string.Join("\n", menu) + "\n" + "\nVad vill du göra? ");
+    Console.Clear();
 
     if (number == "1")
     {
@@ -31,6 +32,8 @@ while(true)
 
         int total = kr.Sum();
         Console.WriteLine($"Total: {total} kr");
+        Console.WriteLine("__________________");
+
     }
 
     else if (number == "2")
@@ -38,7 +41,7 @@ while(true)
             string[] spel = [
             "",
             "Detta är våra spel",
-            "Skriv spelet som du vill lägga till i varukorgen\n",
+            "",
             "GTA 6 - 899kr",
             "F1 25 - 700kr", 
             "Minecraft - 239kr",
@@ -47,55 +50,60 @@ while(true)
             "",
         ];
 
-        
         string choice = Ask(string.Join("\n", spel) + "\nVad vill du köpa?");
-        Console.Clear();
 
         if (choice == "GTA 6")
         {
             items.Add(choice);
             kr.Add(899);
-            Console.WriteLine("Spelet har lagts till i varukorgen");
+            Console.WriteLine("\nSpelet har lagts till i varukorgen");
+            Console.WriteLine("____________________________________");
         }
 
         else if (choice == "F1 25")
         {
             items.Add(choice);
             kr.Add(700);
-            Console.WriteLine("Spelet har lagts till i varukorgen");
+            Console.WriteLine("\nSpelet har lagts till i varukorgen");
+            Console.WriteLine("____________________________________");
         }
         
         else if (choice == "Minecraft")
         {
             items.Add(choice);
             kr.Add(239);
-            Console.WriteLine("Spelet har lagts till i varukorgen");
+            Console.WriteLine("\nSpelet har lagts till i varukorgen");
+            Console.WriteLine("____________________________________");
         }
 
         else if (choice == "Elden Ring")
         {
             items.Add(choice);
             kr.Add(500);
-            Console.WriteLine("Spelet har lagts till i varukorgen");
+            Console.WriteLine("\nSpelet har lagts till i varukorgen");
+            Console.WriteLine("____________________________________");
         }
 
         else if (choice == "LMU")
         {
             items.Add(choice);
             kr.Add(249);
-            Console.WriteLine("Spelet har lagts till i varukorgen");
+            Console.WriteLine("\nSpelet har lagts till i varukorgen");
+            Console.WriteLine("____________________________________");
         }
 
         else
         {
             Console.WriteLine("Spelet finns inte");
+            Console.WriteLine("_________________");
         }
     }
 
     else if (number == "3")
     {
-        
+        break;
     }
+
     else
     {
         Console.WriteLine("Numret är felaktigt");

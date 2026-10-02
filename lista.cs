@@ -1,5 +1,3 @@
-using System.Linq;
-
 List <string> items = new List<string>();
 List <int> kr = new List<int>();
 
